@@ -2,13 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const deps = require('./package.json').dependencies;
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/index'),
   output: {
     publicPath: '/stp/',
   },
-  mode: 'development',
+  mode: 'production',
   watchOptions: {
     ignored: /node_modules/,
   },
@@ -61,9 +63,16 @@ module.exports = {
         },
       },
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    }),
   ],
   devServer: {
     port: 8000,
     static: path.join(__dirname, 'dist'),
+  },
+  optimization: {
+    minimizer: [new CssMinimizerPlugin()],
   },
 };
