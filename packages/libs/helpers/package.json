@@ -1,0 +1,9 @@
+{
+  "name": "@lib/helpers",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.ts",
+  "dependencies": {
+    "@mui/material": "^5.0.5"
+  }
+}

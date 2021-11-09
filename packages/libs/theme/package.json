@@ -1,0 +1,8 @@
+{
+  "name": "@lib/theme",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@mui/material": "^5.0.5"
+  }
+}
