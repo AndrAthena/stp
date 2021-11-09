@@ -1,0 +1,49 @@
+.appMenu {
+  display: flex;
+  flex-direction: column;
+  max-width: 310px;
+}
+
+.menus {
+  flex: 1;
+}
+
+.menus .MuiTabs-scroller {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menus .MuiTabs-flexContainer {
+  height: 100%;
+}
+
+.menus a {
+  min-height: auto;
+  justify-content: flex-start;
+  text-transform: initial;
+  margin-bottom: 0.25rem;
+  padding: 0.75rem 0.5rem;
+  color: #fff;
+}
+
+.appMenuShrink {
+  flex: 0 0 50px;
+  max-width: 50px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.appMenuShrink h1,
+.appMenuShrink a > p {
+  display: none;
+}
+
+.appMenuShrink a {
+  min-width: initial;
+  justify-content: center;
+}
+
+.appMenuShrink a svg {
+  margin-right: 0;
+}

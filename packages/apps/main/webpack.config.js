@@ -2,11 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('webpack').container;
 const deps = require('./package.json').dependencies;
+const shared = require('../../libs/shared-packages');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/index'),
   output: {
-    publicPath: '/stp/',
+    publicPath: '/',
   },
   mode: 'development',
   watchOptions: {
@@ -45,7 +46,7 @@ module.exports = {
       filename: './public/remoteEntry.js',
       library: { type: 'var', name: 'main' },
       remotes: {
-        dashboard: 'dashboard@[dashboardUrl]/remoteEntry.js',
+        project: 'project@[projectUrl]/remoteEntry.js',
       },
       shared: {
         ...deps,
@@ -59,11 +60,13 @@ module.exports = {
           eager: true,
           requiredVersion: deps['react-dom'],
         },
+        ...shared,
       },
     }),
   ],
   devServer: {
     port: 8000,
     static: path.join(__dirname, 'dist'),
+    hot: true,
   },
 };
