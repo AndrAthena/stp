@@ -6,7 +6,8 @@
   "license": "MIT",
   "private": "true",
   "workspaces": [
-    "packages/apps/*"
+    "packages/apps/*",
+    "packages/libs/*"
   ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
