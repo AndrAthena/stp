@@ -11,8 +11,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "dev": "lerna run --parallel dev",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "lerna run build",
+    "deploy": "gh-pages -d ./packages/apps/main/dist"
   },
   "dependencies": {
     "gh-pages": "^3.2.3",
