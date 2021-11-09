@@ -1,0 +1,17 @@
+{
+  "name": "stp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": [
+    "packages/apps/*"
+  ],
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "dev": "lerna run --parallel dev"
+  },
+  "dependencies": {
+    "lerna": "^4.0.0"
+  }
+}
