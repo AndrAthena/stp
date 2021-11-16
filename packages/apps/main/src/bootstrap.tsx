@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 import LeftMenu from './components/LeftMenu';
 import MainRoute from './route';
-import theme from './theme';
+import { theme } from '@lib/theme';
 
 ReactDOM.render(
   <HashRouter>

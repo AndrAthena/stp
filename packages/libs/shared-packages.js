@@ -10,5 +10,6 @@ module.exports = {
   },
   '@lib/theme': {
     singleton: true,
+    requiredVersion: '1.0.0',
   },
 };

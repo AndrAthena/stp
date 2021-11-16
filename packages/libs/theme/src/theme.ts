@@ -9,8 +9,12 @@ const theme = createTheme({
       fontWeight: 500,
     },
     subtitle1: {
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: '1rem',
+    },
+    subtitle2: {
+      fontWeight: 600,
+      fontSize: '.875rem',
     },
   },
   palette: {
@@ -20,6 +24,14 @@ const theme = createTheme({
     primary: {
       main: '#4E5679',
       dark: '#3A405A',
+    },
+    text: {
+      secondary: '#707070',
+    },
+    success: {
+      main: '#2BDF60',
+      light: '#06D6A0',
+      dark: '#2A9D8F',
     },
   },
 

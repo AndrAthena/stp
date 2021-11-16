@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack serve --config webpack.config.js",
+    "dev": "webpack serve --config webpack.config.js --no-client-overlay",
     "build": "webpack --config webpack.prod.js"
   },
   "devDependencies": {
@@ -15,26 +15,30 @@
     "@babel/preset-react": "^7.16.0",
     "@babel/preset-typescript": "^7.16.0",
     "babel-loader": "^8.2.3",
+    "bundle-loader": "^0.5.6",
     "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.1.2",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.4",
     "style-loader": "^3.3.1",
     "webpack": "^5.62.1",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.4.0",
-    "css-minimizer-webpack-plugin": "^3.1.2",
-    "mini-css-extract-plugin": "^2.4.4"
+    "compression-webpack-plugin": "^9.0.0",
+    "@lib/common": "1.0.0",
+    "@lib/icons": "1.0.0"
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@emotion/react": "11.5.0",
+    "@emotion/styled": "11.3.0",
     "@loadable/component": "^5.15.0",
     "@mui/icons-material": "^5.0.5",
     "@mui/material": "^5.0.6",
-    "@emotion/react": "11.5.0",
-    "@emotion/styled": "11.3.0",
+    "react": "^17.0.2",
+    "react-custom-scrollbars": "^4.2.1",
+    "react-dom": "^17.0.2",
     "react-router-dom": "^6.0.1",
     "webpack": "^5.62.1",
-    "webpack-cli": "^4.9.1",
-    "react-custom-scrollbars": "^4.2.1"
+    "webpack-cli": "^4.9.1"
   }
 }

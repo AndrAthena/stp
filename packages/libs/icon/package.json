@@ -1,7 +1,6 @@
 {
   "name": "@lib/icons",
   "version": "1.0.0",
-  "main": "src/index",
   "type": "module",
   "dependencies": {
     "@mui/material": "^5.0.5"

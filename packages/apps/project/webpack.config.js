@@ -27,6 +27,13 @@ module.exports = {
         type: 'asset/resource',
       },
       {
+        test: /\.boostrap.tsx?$/,
+        loader: 'bundle-loader',
+        options: {
+          lazy: true,
+        },
+      },
+      {
         test: /\.tsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
