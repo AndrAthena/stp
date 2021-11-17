@@ -4,6 +4,8 @@ const theme = createTheme({
   typography: {
     fontFamily: "'Poppins', sans-serif",
     fontWeightRegular: 300,
+    htmlFontSize: 14,
+    fontSize: 14,
     h6: {
       fontSize: '1.25rem',
       fontWeight: 500,
@@ -15,6 +17,12 @@ const theme = createTheme({
     subtitle2: {
       fontWeight: 600,
       fontSize: '.875rem',
+    },
+    body1: {
+      fontSize: '0.875rem',
+    },
+    body2: {
+      fontSize: '0.875rem',
     },
   },
   palette: {
@@ -61,6 +69,13 @@ const theme = createTheme({
           '& + input': {
             paddingLeft: 0,
           },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
         },
       },
     },

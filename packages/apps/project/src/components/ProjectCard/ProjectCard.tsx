@@ -1,12 +1,12 @@
 import { ProjectOutlined } from '@lib/icons';
-import { Avatar, Card, CardContent, CardHeader, Typography } from '@mui/material';
+import { Avatar, Card, CardContent, CardHeader, CardProps, Typography } from '@mui/material';
 import React, { FC } from 'react';
 
 interface ProjectCardProps {}
 
-const ProjectCard: FC<ProjectCardProps> = () => {
+const ProjectCard: FC<ProjectCardProps & CardProps> = ({ sx, ...rest }) => {
   return (
-    <Card variant="outlined" sx={{ display: 'flex', mb: 2, p: 2 }}>
+    <Card variant="outlined" {...rest}>
       <CardHeader
         sx={{ p: 0 }}
         avatar={

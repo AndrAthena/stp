@@ -1,6 +1,6 @@
-import { Sx } from '@lib/theme/sx';
+import { CSSProperties } from '@lib/theme/sx';
 
-const sx: Sx = {
+const sx: CSSProperties = {
   overview: {
     display: 'flex',
     flexDirection: 'column',
