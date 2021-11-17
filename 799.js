@@ -74,24 +74,29 @@ var index_js_eager_default = /*#__PURE__*/__webpack_require__.n(index_js_eager_)
 var index_js_ = __webpack_require__(4321);
 // EXTERNAL MODULE: consume shared module (default) @mui/material@^5.0.6 (strict) (fallback: ../../../node_modules/@mui/material/index.js)
 var material_index_js_ = __webpack_require__(7590);
-// EXTERNAL MODULE: ../../libs/common/index.ts + 10 modules
-var common = __webpack_require__(1212);
+// EXTERNAL MODULE: ../../libs/common/index.ts + 9 modules
+var common = __webpack_require__(3291);
+// EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/extends.js
+var esm_extends = __webpack_require__(11);
+// EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__(3613);
 // EXTERNAL MODULE: ../../libs/icon/index.ts + 8 modules
 var icon = __webpack_require__(8972);
 ;// CONCATENATED MODULE: ../project/src/components/ProjectCard/ProjectCard.tsx
 
 
+var _excluded = ["sx"];
 
 
-var ProjectCard = function ProjectCard() {
-  return /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Card, {
-    variant: "outlined",
-    sx: {
-      display: 'flex',
-      mb: 2,
-      p: 2
-    }
-  }, /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.CardHeader, {
+
+
+var ProjectCard = function ProjectCard(_ref) {
+  var sx = _ref.sx,
+      rest = (0,objectWithoutProperties/* default */.Z)(_ref, _excluded);
+
+  return /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Card, (0,esm_extends/* default */.Z)({
+    variant: "outlined"
+  }, rest), /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.CardHeader, {
     sx: {
       p: 0
     },

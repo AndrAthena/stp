@@ -337,8 +337,8 @@ var LeftMenu = function LeftMenu() {
 // EXTERNAL MODULE: consume shared module (default) @loadable/component@^5.15.0 (strict) (fallback: ../../../node_modules/@loadable/component/dist/loadable.esm.js)
 var loadable_esm_js_ = __webpack_require__(7461);
 var loadable_esm_js_default = /*#__PURE__*/__webpack_require__.n(loadable_esm_js_);
-// EXTERNAL MODULE: ../../libs/common/index.ts + 10 modules
-var common = __webpack_require__(1212);
+// EXTERNAL MODULE: ../../libs/common/index.ts + 9 modules
+var common = __webpack_require__(3291);
 ;// CONCATENATED MODULE: ./src/components/ProtectedRoute/ProtectedRoute.tsx
 
 
@@ -365,6 +365,7 @@ var ProtectedRoute = function ProtectedRoute() {
 
 
 
+
 var ProtectedApp = function ProtectedApp() {
   return /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
     sx: {
@@ -379,7 +380,7 @@ var ProtectedApp = function ProtectedApp() {
       p: 2,
       overflow: 'hidden'
     }
-  }, /*#__PURE__*/index_js_eager_default().createElement(components_ProtectedRoute, null)));
+  }, /*#__PURE__*/index_js_eager_default().createElement(common/* CustomScrollbar */.$T, null, /*#__PURE__*/index_js_eager_default().createElement(components_ProtectedRoute, null))));
 };
 
 /* harmony default export */ const ProtectedApp_ProtectedApp = (ProtectedApp);
@@ -404,6 +405,8 @@ var theme = (0,createTheme/* default */.Z)({
   typography: {
     fontFamily: "'Poppins', sans-serif",
     fontWeightRegular: 300,
+    htmlFontSize: 14,
+    fontSize: 14,
     h6: {
       fontSize: '1.25rem',
       fontWeight: 500
@@ -415,6 +418,12 @@ var theme = (0,createTheme/* default */.Z)({
     subtitle2: {
       fontWeight: 600,
       fontSize: '.875rem'
+    },
+    body1: {
+      fontSize: '0.875rem'
+    },
+    body2: {
+      fontSize: '0.875rem'
     }
   },
   palette: {
@@ -462,6 +471,13 @@ var theme = (0,createTheme/* default */.Z)({
           }
         }
       }
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8
+        }
+      }
     }
   }
 });
@@ -482,7 +498,7 @@ react_dom_index_js_eager_default().render( /*#__PURE__*/index_js_eager_default()
 
 /***/ }),
 
-/***/ 1212:
+/***/ 3291:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
@@ -498,28 +514,10 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__(11);
-// EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(6017);
-;// CONCATENATED MODULE: ../../../node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
-
-function objectWithoutProperties_objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = (0,objectWithoutPropertiesLoose/* default */.Z)(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
+// EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__(7169);
+// EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
+var objectWithoutProperties = __webpack_require__(3613);
 // EXTERNAL MODULE: consume shared module (default) react@^17.0.2 (singleton) (fallback: ../../../node_modules/react/index.js) (eager)
 var index_js_eager_ = __webpack_require__(5418);
 var index_js_eager_default = /*#__PURE__*/__webpack_require__.n(index_js_eager_);
@@ -528,17 +526,27 @@ var index_js_ = __webpack_require__(800);
 ;// CONCATENATED MODULE: ../../libs/common/src/CustomScrollbar/CustomScrollbar.tsx
 
 
-var _excluded = ["children"];
+
+var _excluded = ["children", "style"];
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0,defineProperty/* default */.Z)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 
 
 
 var CustomScrollbar = function CustomScrollbar(_ref) {
   var children = _ref.children,
-      rest = objectWithoutProperties_objectWithoutProperties(_ref, _excluded);
+      style = _ref.style,
+      rest = (0,objectWithoutProperties/* default */.Z)(_ref, _excluded);
 
   return /*#__PURE__*/index_js_eager_default().createElement(index_js_.Scrollbars, (0,esm_extends/* default */.Z)({
     autoHide: true,
-    thumbMinSize: 30
+    thumbMinSize: 30,
+    style: _objectSpread({
+      height: '100%'
+    }, style)
   }, rest), children);
 };
 
@@ -559,7 +567,7 @@ var Loading = function Loading(_ref) {
   var open = _ref.open,
       message = _ref.message,
       size = _ref.size,
-      rest = objectWithoutProperties_objectWithoutProperties(_ref, Loading_excluded);
+      rest = (0,objectWithoutProperties/* default */.Z)(_ref, Loading_excluded);
 
   return /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Backdrop, (0,esm_extends/* default */.Z)({
     open: open,
@@ -589,8 +597,6 @@ var Loading = function Loading(_ref) {
 /* harmony default export */ const Loading_Loading = (Loading);
 ;// CONCATENATED MODULE: ../../libs/common/src/Loading/index.ts
 
-// EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__(7169);
 ;// CONCATENATED MODULE: ../../libs/common/src/ProjectCard/style.ts
 var sx = {
   flex: {
@@ -618,9 +624,9 @@ var sx = {
 
 var ProjectCard_excluded = ["title", "subtitle", "badges", "children"];
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ProjectCard_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0,defineProperty/* default */.Z)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function ProjectCard_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ProjectCard_ownKeys(Object(source), true).forEach(function (key) { (0,defineProperty/* default */.Z)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ProjectCard_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 
 
@@ -631,14 +637,14 @@ var ProjectCard = function ProjectCard(_ref) {
       subtitle = _ref.subtitle,
       badges = _ref.badges,
       children = _ref.children,
-      rest = objectWithoutProperties_objectWithoutProperties(_ref, ProjectCard_excluded);
+      rest = (0,objectWithoutProperties/* default */.Z)(_ref, ProjectCard_excluded);
 
   return /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Card, (0,esm_extends/* default */.Z)({
     variant: "outlined",
     sx: style.card
   }, rest), /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.CardHeader, {
     title: /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Box, {
-      sx: _objectSpread(_objectSpread({}, style.flex), {}, {
+      sx: ProjectCard_objectSpread(ProjectCard_objectSpread({}, style.flex), {}, {
         justifyContent: 'space-between'
       })
     }, /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Typography, {
@@ -716,7 +722,7 @@ var TextInput = function TextInput(_ref2) {
       placeholder = _ref2.placeholder,
       variant = _ref2.variant,
       InputProps = _ref2.InputProps,
-      rest = objectWithoutProperties_objectWithoutProperties(_ref2, _excluded2);
+      rest = (0,objectWithoutProperties/* default */.Z)(_ref2, _excluded2);
 
   var searchAdornment = type === 'search' ? {
     startAdornment: /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.InputAdornment, {
@@ -1521,6 +1527,35 @@ function _defineProperty(obj, key, value) {
   }
 
   return obj;
+}
+
+/***/ }),
+
+/***/ 3613:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (/* binding */ _objectWithoutProperties)
+/* harmony export */ });
+/* harmony import */ var _objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6017);
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = (0,_objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .Z)(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
 }
 
 /***/ })

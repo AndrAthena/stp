@@ -20,8 +20,8 @@ var loadable_esm_js_ = __webpack_require__(7461);
 var loadable_esm_js_default = /*#__PURE__*/__webpack_require__.n(loadable_esm_js_);
 // EXTERNAL MODULE: consume shared module (default) react-router-dom@^6.0.1 (strict) (fallback: ../../../node_modules/react-router-dom/index.js)
 var index_js_ = __webpack_require__(573);
-// EXTERNAL MODULE: ../../libs/common/index.ts + 10 modules
-var common = __webpack_require__(1212);
+// EXTERNAL MODULE: ../../libs/common/index.ts + 9 modules
+var common = __webpack_require__(3291);
 // EXTERNAL MODULE: ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
 var injectStylesIntoStyleTag = __webpack_require__(487);
 var injectStylesIntoStyleTag_default = /*#__PURE__*/__webpack_require__.n(injectStylesIntoStyleTag);
@@ -86,7 +86,7 @@ var Overview = loadable_esm_js_default()(function () {
   })
 });
 var ProjectDetails = loadable_esm_js_default()(function () {
-  return __webpack_require__.e(/* import() */ 423).then(__webpack_require__.bind(__webpack_require__, 2423));
+  return __webpack_require__.e(/* import() */ 721).then(__webpack_require__.bind(__webpack_require__, 6721));
 }, {
   fallback: /*#__PURE__*/index_js_eager_default().createElement(common/* Loading */.gb, {
     open: true
