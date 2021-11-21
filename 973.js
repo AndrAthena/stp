@@ -199,6 +199,7 @@ var LeftMenu = function LeftMenu() {
     sx: {
       height: 1,
       p: 2,
+      pt: 3,
       color: 'common.white',
       bgcolor: 'primary.main'
     }
@@ -1072,7 +1073,7 @@ var Checklist = function Checklist(props) {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".appMenu {\r\n  display: flex;\r\n  flex-direction: column;\r\n  max-width: 310px;\r\n}\r\n\r\n.menus {\r\n  flex: 1;\r\n}\r\n\r\n.menus .MuiTabs-scroller {\r\n  height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.menus .MuiTabs-flexContainer {\r\n  height: 100%;\r\n}\r\n\r\n.menus a {\r\n  min-height: auto;\r\n  justify-content: flex-start;\r\n  text-transform: initial;\r\n  margin-bottom: 0.25rem;\r\n  padding: 0.75rem 0.5rem;\r\n  color: #fff;\r\n}\r\n\r\n.appMenuShrink {\r\n  flex: 0 0 50px;\r\n  max-width: 50px;\r\n  padding-left: 0 !important;\r\n  padding-right: 0 !important;\r\n}\r\n\r\n.appMenuShrink h1,\r\n.appMenuShrink a > p {\r\n  display: none;\r\n}\r\n\r\n.appMenuShrink a {\r\n  min-width: initial;\r\n  justify-content: center;\r\n}\r\n\r\n.appMenuShrink a svg {\r\n  margin-right: 0;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".appMenu {\r\n  display: flex;\r\n  flex-direction: column;\r\n  flex: 0 0 300px;\r\n}\r\n\r\n.menus {\r\n  flex: 1;\r\n}\r\n\r\n.menus .MuiTabs-scroller {\r\n  height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.menus .MuiTabs-flexContainer {\r\n  height: 100%;\r\n}\r\n\r\n.menus a {\r\n  min-height: auto;\r\n  justify-content: flex-start;\r\n  text-transform: initial;\r\n  margin-bottom: 0.25rem;\r\n  padding: 0.75rem 0.5rem;\r\n  color: #fff;\r\n}\r\n\r\n.appMenuShrink {\r\n  flex: 0 0 50px;\r\n  max-width: 50px;\r\n  padding-left: 0 !important;\r\n  padding-right: 0 !important;\r\n}\r\n\r\n.appMenuShrink h1,\r\n.appMenuShrink a > p {\r\n  display: none;\r\n}\r\n\r\n.appMenuShrink a {\r\n  min-width: initial;\r\n  justify-content: center;\r\n}\r\n\r\n.appMenuShrink a svg {\r\n  margin-right: 0;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

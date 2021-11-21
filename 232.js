@@ -79,7 +79,7 @@ var update = injectStylesIntoStyleTag_default()(src/* default */.Z, options);
 
 var ROUTE_BASENAME = 'project';
 var Overview = loadable_esm_js_default()(function () {
-  return __webpack_require__.e(/* import() */ 799).then(__webpack_require__.bind(__webpack_require__, 7799));
+  return __webpack_require__.e(/* import() */ 59).then(__webpack_require__.bind(__webpack_require__, 7059));
 }, {
   fallback: /*#__PURE__*/index_js_eager_default().createElement(common/* Loading */.gb, {
     open: true
@@ -122,7 +122,7 @@ var ProjectRoute = function ProjectRoute() {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html,\r\nbody,\r\n#root {\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "html,\r\nbody,\r\n#root {\r\n  height: 100%;\r\n}\r\n\r\nbody {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n.ellipsis-1 {\r\n  display: -webkit-box;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-line-clamp: 1;\r\n  line-clamp: 1;\r\n  overflow: hidden;\r\n}\r\n\r\n.ellipsis-2 {\r\n  display: -webkit-box;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-line-clamp: 2;\r\n  line-clamp: 2;\r\n  overflow: hidden;\r\n}\r\n\r\n.ellipsis-3 {\r\n  display: -webkit-box;\r\n  -webkit-box-orient: vertical;\r\n  -webkit-line-clamp: 3;\r\n  line-clamp: 3;\r\n  overflow: hidden;\r\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
