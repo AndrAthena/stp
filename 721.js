@@ -67,6 +67,8 @@ __webpack_require__.d(__webpack_exports__, {
   "default": () => (/* reexport */ ProjectDetails_ProjectDetails)
 });
 
+// EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/defineProperty.js
+var defineProperty = __webpack_require__(7169);
 // EXTERNAL MODULE: consume shared module (default) react@^17.0.2 (singleton) (fallback: ../../../node_modules/react/index.js) (eager)
 var index_js_eager_ = __webpack_require__(5418);
 var index_js_eager_default = /*#__PURE__*/__webpack_require__.n(index_js_eager_);
@@ -95,17 +97,21 @@ var sx = {
     '& > div': {
       flex: '1 0 0'
     }
+  },
+  coloredBox: {
+    mb: 2,
+    p: 1.5,
+    minHeight: '120px',
+    borderRadius: 2
   }
 };
 /* harmony default export */ const style = (sx);
-// EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/defineProperty.js
-var defineProperty = __webpack_require__(7169);
 // EXTERNAL MODULE: ../../../node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js
 var objectWithoutProperties = __webpack_require__(3613);
 ;// CONCATENATED MODULE: ../project/src/components/BubbleText/style.ts
 var style_sx = {
   coloredBox: {
-    mx: 1,
+    ml: 1,
     mb: 2,
     p: 1.5,
     minHeight: '120px',
@@ -153,6 +159,12 @@ var target_market = __webpack_require__(4312);
 ;// CONCATENATED MODULE: ../project/src/pages/ProjectDetails/ProjectDetails.tsx
 
 
+function ProjectDetails_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function ProjectDetails_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ProjectDetails_ownKeys(Object(source), true).forEach(function (key) { (0,defineProperty/* default */.Z)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ProjectDetails_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+
+
 
 
 
@@ -198,11 +210,135 @@ var ProjectDetails = function ProjectDetails() {
     textSx: {
       bgcolor: '#EFF7FF'
     }
-  }, "Segments with strong growth rates are more attractive as firms can gain market share from primary demand (as opposed to")), /*#__PURE__*/index_js_eager_default().createElement(common/* ProjectCard */.t, {
+  }, "Segments with strong growth rates are more attractive as firms can gain market share from primary demand (as opposed to"), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, {
+    sx: {
+      color: 'text.secondary'
+    },
+    gutterBottom: true
+  }, "What need to be done"), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: {
+      ml: 2
+    }
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, {
+    sx: {
+      mb: 1
+    }
+  }, "1) TASK 1"), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: ProjectDetails_objectSpread(ProjectDetails_objectSpread({}, style.coloredBox), {}, {
+      bgcolor: '#EFF7FF'
+    })
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, null, "Segments with strong growth rates are more attractive as firms can gain market share from primary demand (as opposed to")), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Button, {
+    variant: "contained",
+    size: "small",
+    sx: {
+      bgcolor: '#4E5679'
+    },
+    disableElevation: true,
+    fullWidth: true
+  }, "Completed")), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: {
+      ml: 2
+    }
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, {
+    sx: {
+      mb: 1
+    }
+  }, "1) TASK 2"), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: ProjectDetails_objectSpread(ProjectDetails_objectSpread({}, style.coloredBox), {}, {
+      bgcolor: '#EFF7FF'
+    })
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, null, "Segments with strong growth rates are more attractive as firms can gain market share from primary demand (as opposed to")), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Button, {
+    variant: "contained",
+    size: "small",
+    sx: {
+      bgcolor: '#2BDF60'
+    },
+    disableElevation: true,
+    fullWidth: true
+  }, "Completed")), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: {
+      mt: 3,
+      textAlign: 'center'
+    }
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Button, {
+    variant: "contained",
+    color: "inherit",
+    disableElevation: true
+  }, "Show all task"))), /*#__PURE__*/index_js_eager_default().createElement(common/* ProjectCard */.t, {
     title: "Specific solution",
     badges: [icon/* Info */.kI, icon/* InfoEdited */.b0, CheckList/* default */.Z]
   }, /*#__PURE__*/index_js_eager_default().createElement(common/* ProjectCard */.t, {
     title: "Objective 1",
+    subtitle: /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, {
+      variant: "body2"
+    }, "Warning!!! the deadline is in 02 days"),
+    sx: style.innerCard,
+    variant: "elevation",
+    elevation: 0
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: {
+      display: 'flex'
+    }
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, null, /*#__PURE__*/index_js_eager_default().createElement(components_BubbleText, {
+    title: "Description",
+    textSx: {
+      bgcolor: '#FFF'
+    }
+  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et enim alias quas sed velit fugit modi error non excepturi atque dolor, aliquam molestiae vel ipsa culpa molestias perferendis amet aperiam."), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: {
+      display: 'flex',
+      justifyContent: 'space-between'
+    }
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: {
+      display: 'flex',
+      alignItems: 'baseline'
+    }
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, {
+    sx: {
+      color: 'text.secondary'
+    },
+    gutterBottom: true
+  }, "Budget\xA0"), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, {
+    variant: "h6",
+    sx: {
+      color: 'success.light',
+      fontWeight: 600
+    },
+    gutterBottom: true
+  }, "$ 1000,00")), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: {
+      display: 'flex',
+      alignItems: 'baseline'
+    }
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, {
+    sx: {
+      color: 'text.secondary'
+    },
+    gutterBottom: true
+  }, "Spent\xA0"), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, {
+    variant: "h6",
+    sx: {
+      color: 'success.light',
+      fontWeight: 600
+    },
+    gutterBottom: true
+  }, "$ 99,00"))), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
+    sx: {
+      mt: 3,
+      textAlign: 'center'
+    }
+  }, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Button, {
+    variant: "contained",
+    color: "inherit",
+    sx: {
+      textTransform: 'uppercase',
+      borderRadius: 0
+    },
+    endIcon: /*#__PURE__*/index_js_eager_default().createElement(esm_index_js_.ExpandMore, null),
+    disableElevation: true
+  }, "See Achievability"))), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, null, /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, null, "Progression")))), /*#__PURE__*/index_js_eager_default().createElement(common/* ProjectCard */.t, {
+    title: "Objective 2",
     subtitle: /*#__PURE__*/index_js_eager_default().createElement(index_js_.Typography, {
       variant: "body2"
     }, "Warning!!! the deadline is in 02 days"),

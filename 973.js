@@ -199,7 +199,6 @@ var LeftMenu = function LeftMenu() {
     sx: {
       height: 1,
       p: 2,
-      pt: 3,
       color: 'common.white',
       bgcolor: 'primary.main'
     }
@@ -453,6 +452,9 @@ var theme = (0,createTheme/* default */.Z)({
           textTransform: 'initial',
           fontWeight: 400,
           borderRadius: 6
+        },
+        contained: {
+          backgroundColor: '#F3F3F4'
         }
       }
     },

@@ -88,18 +88,8 @@ var icon = __webpack_require__(8972);
 var sx = {
   card: {
     display: 'flex',
-    alignItems: 'center',
     mb: 2,
     p: 2
-  },
-  cardContent: {
-    maxWidth: 'calc(100% - 102px)',
-    p: '0 !important'
-  },
-  avatar: {
-    width: '86px',
-    height: '86px',
-    bgcolor: '#D8D8D8'
   }
 };
 /* harmony default export */ const style = (sx);
@@ -130,7 +120,11 @@ var ProjectCard = function ProjectCard(_ref) {
       p: 0
     },
     avatar: /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Avatar, {
-      sx: style.avatar
+      sx: {
+        width: '86px',
+        height: '86px',
+        bgcolor: '#D8D8D8'
+      }
     }, /*#__PURE__*/index_js_eager_default().createElement(icon/* ProjectOutlined */.Sq, {
       sx: {
         fontSize: '3rem'
@@ -138,14 +132,16 @@ var ProjectCard = function ProjectCard(_ref) {
       color: "primary"
     }))
   }), /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.CardContent, {
-    sx: style.cardContent
+    sx: {
+      p: '0 !important'
+    }
   }, /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Typography, {
     variant: "h6",
     gutterBottom: true
   }, "Project 1"), /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Typography, {
     variant: "body2",
     gutterBottom: true,
-    className: "ellipsis-1"
+    noWrap: true
   }, /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Typography, {
     variant: "body2",
     component: "span",
@@ -162,7 +158,7 @@ var ProjectCard = function ProjectCard(_ref) {
   }, "Lorem ipsum dolor sit amet.")), /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Typography, {
     variant: "body2",
     gutterBottom: true,
-    className: "ellipsis-1"
+    noWrap: true
   }, /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Typography, {
     variant: "body2",
     component: "span",
@@ -201,8 +197,8 @@ var style_sx = {
     mt: 3,
     overflowY: 'hidden',
     '& > div': {
-      flex: '0 0 calc(33.33% - .7rem)',
-      maxWidth: 'calc(33.33% - .7rem)'
+      flex: '0 0 calc(33.33% - 0.7rem)',
+      maxWidth: 'calc(33.33% - 0.7rem)'
     },
     '& > div:not(:nth-of-type(3n))': {
       marginRight: 2
