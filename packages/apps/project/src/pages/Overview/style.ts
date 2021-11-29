@@ -1,4 +1,4 @@
-import { CSSProperties } from '@lib/theme/sx';
+import { CSSProperties } from '@lib/theme';
 
 const sx: CSSProperties = {
   overview: {
@@ -15,8 +15,8 @@ const sx: CSSProperties = {
     mt: 3,
     overflowY: 'hidden',
     '& > div': {
-      flex: '0 0 calc(33.33% - 2.8rem)',
-      maxWidth: 'calc(33.33% - 2.8rem)',
+      flex: '0 0 calc(33.33% - 0.7rem)',
+      maxWidth: 'calc(33.33% - 0.7rem)',
     },
     '& > div:not(:nth-of-type(3n))': { marginRight: 2 },
   },

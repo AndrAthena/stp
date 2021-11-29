@@ -1,12 +1,13 @@
 import { ProjectOutlined } from '@lib/icons';
 import { Avatar, Card, CardContent, CardHeader, CardProps, Typography } from '@mui/material';
 import React, { FC } from 'react';
+import cls from './style'
 
 interface ProjectCardProps {}
 
 const ProjectCard: FC<ProjectCardProps & CardProps> = ({ sx, ...rest }) => {
   return (
-    <Card variant="outlined" {...rest}>
+    <Card variant="outlined" sx={{...sx, ...cls.card}} {...rest}>
       <CardHeader
         sx={{ p: 0 }}
         avatar={
