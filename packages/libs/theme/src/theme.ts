@@ -53,6 +53,9 @@ const theme = createTheme({
           fontWeight: 400,
           borderRadius: 6,
         },
+        contained: {
+          backgroundColor: '#F3F3F4'
+        }
       },
     },
     MuiOutlinedInput: {
