@@ -86,7 +86,7 @@ var Overview = loadable_esm_js_default()(function () {
   })
 });
 var ProjectDetails = loadable_esm_js_default()(function () {
-  return __webpack_require__.e(/* import() */ 721).then(__webpack_require__.bind(__webpack_require__, 6721));
+  return __webpack_require__.e(/* import() */ 77).then(__webpack_require__.bind(__webpack_require__, 4077));
 }, {
   fallback: /*#__PURE__*/index_js_eager_default().createElement(common/* Loading */.gb, {
     open: true
