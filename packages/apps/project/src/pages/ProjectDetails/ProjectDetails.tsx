@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import ProjectTopHeader from '../../components/ProjectTopHeader/ProjectTopHeader';
 import { ProjectCard, TextInput } from '@lib/common';
 import { Box, Button, Divider, Typography } from '@mui/material';
@@ -8,8 +8,40 @@ import sx from './style';
 import BubbleText from '../../components/BubbleText';
 import { ExpandMore } from '@mui/icons-material';
 import targetMarket from '../../assets/target-market.png';
+import TargetMarketTab, { TabList } from '../../components/TargetMarketTab';
 
 const ProjectDetails: FC<{}> = () => {
+  const [value, setValue] = useState('target-1');
+  const tabs: TabList[] = [
+    {
+      value: 'target-1',
+      content: (
+        <Box sx={{ textAlign: 'center' }}>
+          <img src={targetMarket} alt="" />
+        </Box>
+      ),
+      label: 'Target Market 1',
+    },
+    {
+      value: 'target-2',
+      content: (
+        <Box sx={{ textAlign: 'center' }}>
+          <img src={targetMarket} alt="" />
+        </Box>
+      ),
+      label: 'Target Market 2',
+    },
+    {
+      value: 'target-3',
+      content: (
+        <Box sx={{ textAlign: 'center' }}>
+          <img src={targetMarket} alt="" />
+        </Box>
+      ),
+      label: 'Target Market 3',
+    },
+  ];
+
   return (
     <Box sx={{ height: 1 }}>
       <ProjectTopHeader
@@ -23,24 +55,12 @@ const ProjectDetails: FC<{}> = () => {
       />
       <TextInput type="search" sx={{ mt: 5, mb: 4 }} fullWidth />
       <Box sx={sx.projectContainer}>
-        <ProjectCard
-          title="Business issues"
-          badges={[Info, InfoEdited, Checklist]}
-          sx={{ mr: 2 }}
-        >
-          <BubbleText
-            title="Business issues to be addressed"
-            textSx={{ mb: 2, bgcolor: '#EFF7FF' }}
-          >
-            Segments with strong growth rates are more attractive as firms can
-            gain market share from primary demand (as opposed to
+        <ProjectCard title="Business issues" badges={[Info, InfoEdited, Checklist]} sx={{ mr: 2 }}>
+          <BubbleText title="Business issues to be addressed" textSx={{ mb: 2, bgcolor: '#EFF7FF' }}>
+            Segments with strong growth rates are more attractive as firms can gain market share from primary demand (as opposed to
           </BubbleText>
-          <BubbleText
-            title="What is already known about this?"
-            textSx={{ bgcolor: '#EFF7FF' }}
-          >
-            Segments with strong growth rates are more attractive as firms can
-            gain market share from primary demand (as opposed to
+          <BubbleText title="What is already known about this?" textSx={{ bgcolor: '#EFF7FF' }}>
+            Segments with strong growth rates are more attractive as firms can gain market share from primary demand (as opposed to
           </BubbleText>
 
           <Typography sx={{ color: 'text.secondary' }} gutterBottom>
@@ -50,36 +70,22 @@ const ProjectDetails: FC<{}> = () => {
             <Typography sx={{ mb: 1 }}>1) TASK 1</Typography>
             <Box sx={{ ...sx.coloredBox, bgcolor: '#EFF7FF' }}>
               <Typography>
-                Segments with strong growth rates are more attractive as firms
-                can gain market share from primary demand (as opposed to
+                Segments with strong growth rates are more attractive as firms can gain market share from primary demand (as opposed to
               </Typography>
             </Box>
-            <Button
-              variant="contained"
-              size="small"
-              sx={{ bgcolor: '#4E5679' }}
-              disableElevation
-              fullWidth
-            >
+            <Button variant="contained" size="small" sx={{ bgcolor: '#4E5679' }} disableElevation fullWidth>
               Completed
             </Button>
           </Box>
 
           <Box sx={{ ml: 2 }}>
-            <Typography sx={{ mb: 1 }}>1) TASK 2</Typography>
+            <Typography sx={{ mt: 2, mb: 1 }}>1) TASK 2</Typography>
             <Box sx={{ ...sx.coloredBox, bgcolor: '#EFF7FF' }}>
               <Typography>
-                Segments with strong growth rates are more attractive as firms
-                can gain market share from primary demand (as opposed to
+                Segments with strong growth rates are more attractive as firms can gain market share from primary demand (as opposed to
               </Typography>
             </Box>
-            <Button
-              variant="contained"
-              size="small"
-              sx={{ bgcolor: '#2BDF60' }}
-              disableElevation
-              fullWidth
-            >
+            <Button variant="contained" size="small" sx={{ bgcolor: '#2BDF60' }} disableElevation fullWidth>
               Completed
             </Button>
           </Box>
@@ -91,17 +97,10 @@ const ProjectDetails: FC<{}> = () => {
           </Box>
         </ProjectCard>
 
-        <ProjectCard
-          title="Specific solution"
-          badges={[Info, InfoEdited, Checklist]}
-        >
+        <ProjectCard title="Specific solution" badges={[Info, InfoEdited, Checklist]}>
           <ProjectCard
             title="Objective 1"
-            subtitle={
-              <Typography variant="body2">
-                Warning!!! the deadline is in 02 days
-              </Typography>
-            }
+            subtitle={<Typography variant="body2">Warning!!! the deadline is in 02 days</Typography>}
             sx={sx.innerCard}
             variant="elevation"
             elevation={0}
@@ -109,10 +108,8 @@ const ProjectDetails: FC<{}> = () => {
             <Box sx={{ display: 'flex' }}>
               <Box>
                 <BubbleText title="Description" textSx={{ bgcolor: '#FFF' }}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                  enim alias quas sed velit fugit modi error non excepturi atque
-                  dolor, aliquam molestiae vel ipsa culpa molestias perferendis
-                  amet aperiam.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et enim alias quas sed velit fugit modi error non excepturi atque dolor,
+                  aliquam molestiae vel ipsa culpa molestias perferendis amet aperiam.
                 </BubbleText>
 
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -120,11 +117,7 @@ const ProjectDetails: FC<{}> = () => {
                     <Typography sx={{ color: 'text.secondary' }} gutterBottom>
                       Budget&nbsp;
                     </Typography>
-                    <Typography
-                      variant="h6"
-                      sx={{ color: 'success.light', fontWeight: 600 }}
-                      gutterBottom
-                    >
+                    <Typography variant="h6" sx={{ color: 'success.light', fontWeight: 600 }} gutterBottom>
                       $ 1000,00
                     </Typography>
                   </Box>
@@ -132,11 +125,7 @@ const ProjectDetails: FC<{}> = () => {
                     <Typography sx={{ color: 'text.secondary' }} gutterBottom>
                       Spent&nbsp;
                     </Typography>
-                    <Typography
-                      variant="h6"
-                      sx={{ color: 'success.light', fontWeight: 600 }}
-                      gutterBottom
-                    >
+                    <Typography variant="h6" sx={{ color: 'success.light', fontWeight: 600 }} gutterBottom>
                       $ 99,00
                     </Typography>
                   </Box>
@@ -162,11 +151,7 @@ const ProjectDetails: FC<{}> = () => {
 
           <ProjectCard
             title="Objective 2"
-            subtitle={
-              <Typography variant="body2">
-                Warning!!! the deadline is in 02 days
-              </Typography>
-            }
+            subtitle={<Typography variant="body2">Warning!!! the deadline is in 02 days</Typography>}
             sx={sx.innerCard}
             variant="elevation"
             elevation={0}
@@ -174,10 +159,8 @@ const ProjectDetails: FC<{}> = () => {
             <Box sx={{ display: 'flex' }}>
               <Box>
                 <BubbleText title="Description" textSx={{ bgcolor: '#FFF' }}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et
-                  enim alias quas sed velit fugit modi error non excepturi atque
-                  dolor, aliquam molestiae vel ipsa culpa molestias perferendis
-                  amet aperiam.
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et enim alias quas sed velit fugit modi error non excepturi atque dolor,
+                  aliquam molestiae vel ipsa culpa molestias perferendis amet aperiam.
                 </BubbleText>
 
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -185,11 +168,7 @@ const ProjectDetails: FC<{}> = () => {
                     <Typography sx={{ color: 'text.secondary' }} gutterBottom>
                       Budget&nbsp;
                     </Typography>
-                    <Typography
-                      variant="h6"
-                      sx={{ color: 'success.light', fontWeight: 600 }}
-                      gutterBottom
-                    >
+                    <Typography variant="h6" sx={{ color: 'success.light', fontWeight: 600 }} gutterBottom>
                       $ 1000,00
                     </Typography>
                   </Box>
@@ -197,11 +176,7 @@ const ProjectDetails: FC<{}> = () => {
                     <Typography sx={{ color: 'text.secondary' }} gutterBottom>
                       Spent&nbsp;
                     </Typography>
-                    <Typography
-                      variant="h6"
-                      sx={{ color: 'success.light', fontWeight: 600 }}
-                      gutterBottom
-                    >
+                    <Typography variant="h6" sx={{ color: 'success.light', fontWeight: 600 }} gutterBottom>
                       $ 99,00
                     </Typography>
                   </Box>
@@ -228,9 +203,7 @@ const ProjectDetails: FC<{}> = () => {
       </Box>
       <Divider sx={{ my: 2 }} />
       <ProjectCard title="Target market" badges={[Info, InfoEdited, Checklist]}>
-        <Box sx={{ textAlign: 'center' }}>
-          <img src={targetMarket} alt="Target market" />
-        </Box>
+        <TargetMarketTab value={value} setValue={setValue} tabs={tabs} centered />
       </ProjectCard>
     </Box>
   );
