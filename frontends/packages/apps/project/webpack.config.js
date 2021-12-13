@@ -69,7 +69,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 8001,
+    port: 3001,
     static: path.join(__dirname, 'dist'),
     hot: true,
   },

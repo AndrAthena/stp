@@ -65,7 +65,7 @@ module.exports = {
     }),
   ],
   devServer: {
-    port: 8000,
+    port: 3000,
     static: path.join(__dirname, 'dist'),
     hot: true,
   },
