@@ -8,8 +8,8 @@ const sx: CSSProperties = {
     justifyContent: 'center',
     alignItems: 'center',
     '& > div': {
-      maxWidth: 900,
-      minWidth: 900,
+      maxWidth: 600,
+      minWidth: 600,
     },
   },
   radio: {
@@ -21,6 +21,9 @@ const sx: CSSProperties = {
     '&:first-of-type': {
       mr: 1.5,
     },
+  },
+  radioChecked: {
+    border: '1px solid secondary.main',
   },
 };
 

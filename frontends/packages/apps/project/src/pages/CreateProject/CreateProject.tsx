@@ -16,6 +16,7 @@ const CreateProject = () => {
     },
   ];
   const handleContinue = () => {};
+  const handlePrev = () => {};
 
   return (
     <CustomStepper
@@ -26,6 +27,7 @@ const CreateProject = () => {
       sx={{ minWidth: '250px' }}
       backLabel="Project Overview"
       onContinue={handleContinue}
+      onPrev={handlePrev}
     />
   );
 };
