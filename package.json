@@ -13,7 +13,7 @@
     "bootstrap": "lerna bootstrap",
     "dev": "lerna run --parallel dev",
     "predeploy": "lerna run build",
-    "deploy": "gh-pages -d ./packages/apps/main/dist"
+    "deploy": "gh-pages -d ./frontends/packages/apps/main/dist"
   },
   "dependencies": {
     "gh-pages": "^3.2.3",
