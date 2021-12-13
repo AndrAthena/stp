@@ -6,6 +6,7 @@ import { ProjectCard } from '../../components/ProjectCard';
 import sx from './style';
 import ProjectTopHeader from '../../components/ProjectTopHeader';
 import { useNavigate } from 'react-router-dom';
+import { Formik } from 'formik';
 
 interface OverviewProps {}
 
@@ -25,7 +26,10 @@ const Overview: FC<OverviewProps> = () => {
           action={(_) => {}}
         />
         <Box sx={{ display: 'flex', alignItems: 'center', mt: 4 }}>
-          <TextInput type="search" placeholder="Searh" fullWidth />
+          <Formik initialValues={{ search: '' }} onSubmit={() => {}}>
+            {() => <TextInput type="search" name="search" placeholder="Searh" fullWidth />}
+          </Formik>
+
           <Box sx={{ display: 'flex', alignItems: 'center', ml: 1 }}>
             <IconButton size="small">
               <GridViewSharp />

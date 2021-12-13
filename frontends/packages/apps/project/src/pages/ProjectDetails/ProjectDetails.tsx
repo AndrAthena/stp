@@ -8,6 +8,7 @@ import sx from './style';
 import BubbleText from '../../components/BubbleText';
 import { ArrowBack, ExpandMore } from '@mui/icons-material';
 import TargetMarket from '../TargetMarket';
+import { Formik } from 'formik';
 
 const ProjectDetails: FC<{}> = () => {
   return (
@@ -21,7 +22,9 @@ const ProjectDetails: FC<{}> = () => {
             eveniet fuga explicabo."
         action={(_) => {}}
       />
-      <TextInput type="search" sx={{ mt: 5, mb: 4 }} fullWidth />
+      <Formik initialValues={{ search: '' }} onSubmit={() => {}}>
+        {() => <TextInput type="search" name="search" placeholder="Searh" sx={{ mt: 5, mb: 4 }} fullWidth />}
+      </Formik>
       <Box sx={sx.projectContainer}>
         <ProjectCard title="Business issues" badges={[Info, InfoEdited, Checklist]} sx={{ mr: 2 }}>
           <BubbleText title="Business issues to be addressed" textSx={{ mb: 2, bgcolor: '#EFF7FF' }}>
