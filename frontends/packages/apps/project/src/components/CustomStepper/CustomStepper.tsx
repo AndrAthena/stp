@@ -20,6 +20,7 @@ interface CustomStepperProps {
   onPrev?(event: React.MouseEvent<any>): void;
   onContinue?(event: React.MouseEvent<any>): void;
   onFinish?(event: React.MouseEvent<any>): void;
+  buttonPlacement?: 'left' | 'center' | 'right';
 }
 
 const CustomStepper: FC<CustomStepperProps & StepperProps & { sxContainer?: SxProps<Theme> }> = ({
@@ -37,6 +38,7 @@ const CustomStepper: FC<CustomStepperProps & StepperProps & { sxContainer?: SxPr
   onPrev,
   onContinue,
   onFinish,
+  buttonPlacement = 'center',
   ...rest
 }) => {
   const verticalSx = orientation === 'horizontal' ? style.vertical : style.horizontal;
@@ -76,7 +78,7 @@ const CustomStepper: FC<CustomStepperProps & StepperProps & { sxContainer?: SxPr
       </Box>
       <Box sx={style.stepContent}>
         {steps.map(({ content }, index: number) => activeStep === index && content)}
-        <Box sx={{ textAlign: 'center' }}>
+        <Box sx={{ textAlign: buttonPlacement }}>
           {activeStep !== 0 && (
             <Button variant="outlined" color="secondary" sx={{ mr: 1.5 }} onClick={handlePrev}>
               {backButtonLabel ?? 'Back'}
