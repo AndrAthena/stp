@@ -41,7 +41,7 @@ interface RadioInputProps {
 
 const RadioInput: FC<RadioInputProps & Omit<FormControlLabelProps, 'control'>> = ({ type, inputProps, sx, name, gutterBottom = false, ...rest }) => {
   const { isSubmitting } = useFormikContext();
-  const [field] = useField(name);
+  const [field] = useField({ name });
   const { value, onChange } = field;
 
   const Control = ControlType(type);
@@ -61,6 +61,7 @@ const RadioInput: FC<RadioInputProps & Omit<FormControlLabelProps, 'control'>> =
 interface TextInputProps extends Omit<TextFieldProps, 'onChange'> {
   gutterBottom?: boolean;
   wait?: number;
+  searchIconPlacement?: 'start' | 'end';
   //onChange(value: unknown): void;
 }
 
@@ -75,18 +76,19 @@ const TextInput: FC<TextInputProps> = ({
   gutterBottom = false,
   wait,
   sx,
+  searchIconPlacement = 'start',
   ...rest
 }) => {
   const { isSubmitting, isValid } = useFormikContext();
-  const [field, meta] = useField(name);
+  const [field, meta] = useField({ name });
   const { value, onChange } = field;
   const { error, touched } = meta;
 
   const searchAdornment =
     type === 'search'
       ? {
-          startAdornment: (
-            <InputAdornment position="start">
+          [searchIconPlacement + 'Adornment']: (
+            <InputAdornment position={searchIconPlacement}>
               <SearchOutlined />
             </InputAdornment>
           ),

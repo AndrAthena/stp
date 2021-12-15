@@ -1,13 +1,14 @@
-import { Box, InputLabel, RadioGroup, Typography } from '@mui/material';
-import React from 'react';
+import { Box, RadioGroup, Typography } from '@mui/material';
+import React, { FC } from 'react';
 import sx from './style';
 import { TextInput, RadioInput } from '@lib/common';
-import { Formik } from 'formik';
-import * as yup from 'yup';
 
-const Step1 = () => {
-  const handleNext = () => {};
+interface Step1Props {
+  onChange(e: React.ChangeEvent<any>): void;
+  onSubmit(e?: React.FormEvent<HTMLFormElement>): void;
+}
 
+const Step1: FC<Step1Props> = ({ onChange, onSubmit }) => {
   return (
     <Box sx={sx.step1}>
       <Box>
@@ -18,40 +19,22 @@ const Step1 = () => {
           First, let's started with the basics
         </Typography>
         <Box sx={{ mt: 10 }}>
-          <Formik
-            initialValues={{
-              project_name: '',
-              project_storage: '',
-              project_type: 'B2B',
-            }}
-            validationSchema={yup.object({
-              project_name: yup.string().min(2).required(),
-              project_storage: yup.string().min(2).required(),
-              project_type: yup.string().required().required(),
-            })}
-            onSubmit={(values) => {
-              console.log(values);
+          <form
+            onSubmit={onSubmit}
+            onKeyPress={(e: React.KeyboardEvent<HTMLFormElement>) => {
+              if (e.key === 'Enter') {
+                onSubmit(e);
+              }
             }}
           >
-            {({ handleSubmit, handleChange, values }) => (
-              <form
-                onSubmit={handleSubmit}
-                onKeyPress={(e: React.KeyboardEvent<HTMLFormElement>) => {
-                  if (e.key === 'Enter') {
-                    handleSubmit(e);
-                  }
-                }}
-              >
-                <TextInput label="Project name" name="project_name" gutterBottom fullWidth />
-                <Typography gutterBottom>Project type</Typography>
-                <RadioGroup name="project_type" onChange={handleChange} row>
-                  <RadioInput type="radio" label="B2B" value="B2B" inputProps={{ color: 'secondary' }} sx={sx.radio} gutterBottom />
-                  <RadioInput type="radio" label="B2C" value="B2C" inputProps={{ color: 'secondary' }} sx={sx.radio} gutterBottom />
-                </RadioGroup>
-                <TextInput label="Storage" name="project_storage" gutterBottom fullWidth />
-              </form>
-            )}
-          </Formik>
+            <TextInput label="Project name" name="project_name" gutterBottom fullWidth />
+            <Typography gutterBottom>Project type</Typography>
+            <RadioGroup name="project_type" onChange={onChange} row>
+              <RadioInput type="radio" label="B2B" value="B2B" inputProps={{ color: 'secondary' }} sx={sx.radio} gutterBottom />
+              <RadioInput type="radio" label="B2C" value="B2C" inputProps={{ color: 'secondary' }} sx={sx.radio} gutterBottom />
+            </RadioGroup>
+            <TextInput label="Storage" name="project_storage" gutterBottom fullWidth />
+          </form>
         </Box>
       </Box>
     </Box>

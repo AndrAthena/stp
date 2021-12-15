@@ -21,6 +21,7 @@ interface CustomStepperProps {
   onContinue?(event: React.MouseEvent<any>): void;
   onFinish?(event: React.MouseEvent<any>): void;
   buttonPlacement?: 'left' | 'center' | 'right';
+  isValid: boolean;
 }
 
 const CustomStepper: FC<CustomStepperProps & StepperProps & { sxContainer?: SxProps<Theme> }> = ({
@@ -39,6 +40,7 @@ const CustomStepper: FC<CustomStepperProps & StepperProps & { sxContainer?: SxPr
   onContinue,
   onFinish,
   buttonPlacement = 'center',
+  isValid,
   ...rest
 }) => {
   const verticalSx = orientation === 'horizontal' ? style.vertical : style.horizontal;
@@ -50,7 +52,7 @@ const CustomStepper: FC<CustomStepperProps & StepperProps & { sxContainer?: SxPr
   const lastIndex = steps.length - 1;
   const handleContinue = (e: React.MouseEvent<any>) => {
     onContinue(e);
-    setActiveStep((prev) => prev + 1);
+    if (isValid) setActiveStep((prev) => prev + 1);
   };
 
   const handlePrev = (e: React.MouseEvent<any>) => {
