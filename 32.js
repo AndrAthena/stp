@@ -82,8 +82,8 @@ var index_js_eager_default = /*#__PURE__*/__webpack_require__.n(index_js_eager_)
 var index_js_ = __webpack_require__(6454);
 // EXTERNAL MODULE: consume shared module (default) @mui/material@^5.0.6 (strict) (fallback: ../../../../node_modules/@mui/material/index.js)
 var material_index_js_ = __webpack_require__(9039);
-// EXTERNAL MODULE: ../../libs/common/index.ts + 9 modules
-var common = __webpack_require__(6884);
+// EXTERNAL MODULE: ../../libs/common/index.ts + 12 modules
+var common = __webpack_require__(1788);
 // EXTERNAL MODULE: ../../../../node_modules/@babel/runtime/helpers/esm/extends.js
 var esm_extends = __webpack_require__(4390);
 // EXTERNAL MODULE: ../../../../node_modules/@babel/runtime/helpers/esm/defineProperty.js
@@ -220,7 +220,10 @@ var style_sx = {
 var ProjectTopHeader = __webpack_require__(6340);
 // EXTERNAL MODULE: consume shared module (default) react-router-dom@^6.0.1 (strict) (fallback: ../../../../node_modules/react-router-dom/index.js)
 var react_router_dom_index_js_ = __webpack_require__(7477);
+// EXTERNAL MODULE: consume shared module (default) formik@^2.2.9 (strict) (fallback: ../../../../node_modules/formik/dist/formik.esm.js)
+var formik_esm_js_ = __webpack_require__(4712);
 ;// CONCATENATED MODULE: ../project/src/pages/Overview/Overview.tsx
+
 
 
 
@@ -251,10 +254,18 @@ var Overview = function Overview() {
       alignItems: 'center',
       mt: 4
     }
-  }, /*#__PURE__*/index_js_eager_default().createElement(common/* TextInput */.oi, {
-    type: "search",
-    placeholder: "Searh",
-    fullWidth: true
+  }, /*#__PURE__*/index_js_eager_default().createElement(formik_esm_js_.Formik, {
+    initialValues: {
+      search: ''
+    },
+    onSubmit: function onSubmit() {}
+  }, function () {
+    return /*#__PURE__*/index_js_eager_default().createElement(common/* TextInput */.oi, {
+      type: "search",
+      name: "search",
+      placeholder: "Searh",
+      fullWidth: true
+    });
   }), /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Box, {
     sx: {
       display: 'flex',

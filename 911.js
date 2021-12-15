@@ -880,8 +880,8 @@ var index_js_eager_ = __webpack_require__(5847);
 var index_js_eager_default = /*#__PURE__*/__webpack_require__.n(index_js_eager_);
 // EXTERNAL MODULE: ../project/src/components/ProjectTopHeader/index.ts + 1 modules
 var ProjectTopHeader = __webpack_require__(6340);
-// EXTERNAL MODULE: ../../libs/common/index.ts + 9 modules
-var common = __webpack_require__(6884);
+// EXTERNAL MODULE: ../../libs/common/index.ts + 12 modules
+var common = __webpack_require__(1788);
 // EXTERNAL MODULE: consume shared module (default) @mui/material@^5.0.6 (strict) (fallback: ../../../../node_modules/@mui/material/index.js)
 var index_js_ = __webpack_require__(9039);
 // EXTERNAL MODULE: ../../libs/icon/index.ts + 10 modules
@@ -1178,12 +1178,15 @@ var TargetMarket = function TargetMarket() {
 /* harmony default export */ const TargetMarket_TargetMarket = (TargetMarket);
 ;// CONCATENATED MODULE: ../project/src/pages/TargetMarket/index.ts
 
+// EXTERNAL MODULE: consume shared module (default) formik@^2.2.9 (strict) (fallback: ../../../../node_modules/formik/dist/formik.esm.js)
+var formik_esm_js_ = __webpack_require__(4712);
 ;// CONCATENATED MODULE: ../project/src/pages/ProjectDetails/ProjectDetails.tsx
 
 
 function ProjectDetails_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function ProjectDetails_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ProjectDetails_ownKeys(Object(source), true).forEach(function (key) { (0,defineProperty/* default */.Z)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ProjectDetails_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
 
 
 
@@ -1207,13 +1210,22 @@ var ProjectDetails = function ProjectDetails() {
     title: "Project 1",
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod vero quisquam officiis\r doloribus perferendis voluptate doloremque. Optio in necessitatibus facere quisquam\r quaerat corporis, voluptatum suscipit, delectus eius nihil repellendus non quod ullam aut\r eveniet fuga explicabo.",
     action: function action(_) {}
-  }), /*#__PURE__*/index_js_eager_default().createElement(common/* TextInput */.oi, {
-    type: "search",
-    sx: {
-      mt: 5,
-      mb: 4
+  }), /*#__PURE__*/index_js_eager_default().createElement(formik_esm_js_.Formik, {
+    initialValues: {
+      search: ''
     },
-    fullWidth: true
+    onSubmit: function onSubmit() {}
+  }, function () {
+    return /*#__PURE__*/index_js_eager_default().createElement(common/* TextInput */.oi, {
+      type: "search",
+      name: "search",
+      placeholder: "Searh",
+      sx: {
+        mt: 5,
+        mb: 4
+      },
+      fullWidth: true
+    });
   }), /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
     sx: style.projectContainer
   }, /*#__PURE__*/index_js_eager_default().createElement(common/* ProjectCard */.t, {
