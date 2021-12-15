@@ -9,8 +9,11 @@ import BubbleText from '../../components/BubbleText';
 import { ArrowBack, ExpandMore } from '@mui/icons-material';
 import TargetMarket from '../TargetMarket';
 import { Formik } from 'formik';
+import { useNavigate } from 'react-router-dom';
 
 const ProjectDetails: FC<{}> = () => {
+  const navigate = useNavigate();
+
   return (
     <Box sx={{ height: 1, p: 2 }}>
       <ProjectTopHeader
@@ -20,7 +23,7 @@ const ProjectDetails: FC<{}> = () => {
             doloribus perferendis voluptate doloremque. Optio in necessitatibus facere quisquam
             quaerat corporis, voluptatum suscipit, delectus eius nihil repellendus non quod ullam aut
             eveniet fuga explicabo."
-        action={(_) => {}}
+        action={() => navigate('/project/create')}
       />
       <Formik initialValues={{ search: '' }} onSubmit={() => {}}>
         {() => <TextInput type="search" name="search" placeholder="Searh" sx={{ mt: 5, mb: 4 }} fullWidth />}
