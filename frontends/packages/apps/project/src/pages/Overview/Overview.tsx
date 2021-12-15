@@ -23,7 +23,7 @@ const Overview: FC<OverviewProps> = () => {
           doloribus perferendis voluptate doloremque. Optio in necessitatibus facere quisquam
           quaerat corporis, voluptatum suscipit, delectus eius nihil repellendus non quod ullam aut
           eveniet fuga explicabo."
-          action={(_) => {}}
+          action={(_) => navigate('/project/create')}
         />
         <Box sx={{ display: 'flex', alignItems: 'center', mt: 4 }}>
           <Formik initialValues={{ search: '' }} onSubmit={() => {}}>
