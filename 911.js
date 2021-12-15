@@ -1180,6 +1180,8 @@ var TargetMarket = function TargetMarket() {
 
 // EXTERNAL MODULE: consume shared module (default) formik@^2.2.9 (strict) (fallback: ../../../../node_modules/formik/dist/formik.esm.js)
 var formik_esm_js_ = __webpack_require__(4712);
+// EXTERNAL MODULE: consume shared module (default) react-router-dom@^6.0.1 (strict) (fallback: ../../../../node_modules/react-router-dom/index.js)
+var react_router_dom_index_js_ = __webpack_require__(7477);
 ;// CONCATENATED MODULE: ../project/src/pages/ProjectDetails/ProjectDetails.tsx
 
 
@@ -1199,7 +1201,9 @@ function ProjectDetails_objectSpread(target) { for (var i = 1; i < arguments.len
 
 
 
+
 var ProjectDetails = function ProjectDetails() {
+  var navigate = (0,react_router_dom_index_js_.useNavigate)();
   return /*#__PURE__*/index_js_eager_default().createElement(index_js_.Box, {
     sx: {
       height: 1,
@@ -1209,7 +1213,9 @@ var ProjectDetails = function ProjectDetails() {
     overview: true,
     title: "Project 1",
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod vero quisquam officiis\r doloribus perferendis voluptate doloremque. Optio in necessitatibus facere quisquam\r quaerat corporis, voluptatum suscipit, delectus eius nihil repellendus non quod ullam aut\r eveniet fuga explicabo.",
-    action: function action(_) {}
+    action: function action() {
+      return navigate('/project/create');
+    }
   }), /*#__PURE__*/index_js_eager_default().createElement(formik_esm_js_.Formik, {
     initialValues: {
       search: ''

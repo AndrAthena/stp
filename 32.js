@@ -247,7 +247,9 @@ var Overview = function Overview() {
   }, /*#__PURE__*/index_js_eager_default().createElement(ProjectTopHeader/* default */.Z, {
     title: "Project overview",
     desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod vero quisquam officiis\r doloribus perferendis voluptate doloremque. Optio in necessitatibus facere quisquam\r quaerat corporis, voluptatum suscipit, delectus eius nihil repellendus non quod ullam aut\r eveniet fuga explicabo.",
-    action: function action(_) {}
+    action: function action(_) {
+      return navigate('/project/create');
+    }
   }), /*#__PURE__*/index_js_eager_default().createElement(material_index_js_.Box, {
     sx: {
       display: 'flex',
